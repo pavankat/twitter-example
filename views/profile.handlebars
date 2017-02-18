@@ -1,0 +1,12 @@
+<h1>Profile</h1>
+
+<p>id: {{user.id}}
+
+<p>username: {{user.username}}</p>
+
+<p>password: {{user.password}}</p>
+
+<h2>Tweets</h2>
+{{#each tweets}}
+	<p>{{id}} : {{tweet}}</p>
+{{/each}}
