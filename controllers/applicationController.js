@@ -4,7 +4,6 @@ var router = express.Router();
 
 // Import the model (user.js) to use its database functions.
 var user = require("../models/user.js");
-var tweet = require("../models/tweet.js");
 
 // Create all our routes and set up logic within those routes where required.
 
