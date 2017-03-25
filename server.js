@@ -2,9 +2,14 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var methodOverride = require("method-override");
 
-var port = 3000;
+/*
+	did this instead of 
+		var app = express();
+	because now I can include this file and get the app
 
-var app = express();
+	this is useful in the connection.js file
+*/
+var app = module.exports = express(); 
 
 // Serve static content for the app from the "public" directory in the application directory.
 app.use(express.static(process.cwd() + "/public"));
@@ -30,7 +35,9 @@ app.use("/users", usersController);
 app.use("/tweets", tweetsController);
 
 
+var port = process.env.PORT || 3000;
 app.listen(port);
+
 
 
 
